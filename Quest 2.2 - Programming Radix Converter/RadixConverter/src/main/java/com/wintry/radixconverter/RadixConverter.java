@@ -18,13 +18,13 @@ public class RadixConverter {
     // ========================= MAIN =========================
     public static void main(String[] args) {
         ArrayList<String[]> results = new ArrayList<>(); // store results as String arrays now
-        try (Scanner scanner = new Scanner(System.in)) {
+        try (Scanner userInput = new Scanner(System.in)) {
 
             int[] allowedBases = {2, 8, 10, 16};
 
             while (true) {
                 System.out.print("Enter origin base (2, 8, 10, 16): ");
-                String baseInput = scanner.nextLine().trim();
+                String baseInput = userInput.nextLine().trim();
                 if (baseInput.equalsIgnoreCase("STOP")) break;
 
                 int originBase;
@@ -49,7 +49,7 @@ public class RadixConverter {
                 }
 
                 System.out.print("Enter number in base " + originBase + ": ");
-                String numberInput = scanner.nextLine().trim();
+                String numberInput = userInput.nextLine().trim();
                 if (numberInput.equalsIgnoreCase("STOP")) break;
 
                 double decimalValue;

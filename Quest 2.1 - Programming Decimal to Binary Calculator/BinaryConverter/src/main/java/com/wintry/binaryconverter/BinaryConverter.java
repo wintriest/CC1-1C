@@ -336,11 +336,11 @@ public class BinaryConverter {
 
     public static void main(String[] args) {
         ArrayList<String[]> results = new ArrayList<>(); // store results as String arrays
-        try (Scanner scanner = new Scanner(System.in)) {
+        try (Scanner userInput = new Scanner(System.in)) {
 
             while (true) {
                 System.out.print("Decimal: ");
-                String input = scanner.nextLine().trim();
+                String input = userInput.nextLine().trim();
 
                 if (input.equalsIgnoreCase("STOP")) {
                     break;
